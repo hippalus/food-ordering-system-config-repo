@@ -7,3 +7,17 @@ eureka:
     fetchRegistry: false
   server:
     enableSelfPreservation: false
+
+---
+spring:
+  profiles: docker
+server:
+  port: ${EUREKA_SERVER_PORT:8761}
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    enableSelfPreservation: false
+
