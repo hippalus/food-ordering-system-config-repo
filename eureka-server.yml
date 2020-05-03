@@ -11,6 +11,8 @@ eureka:
 ---
 spring:
   profiles: docker
+  application:
+    name: eureka-server
 server:
   port: ${EUREKA_SERVER_PORT:8761}
 
@@ -18,6 +20,3 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-  server:
-    enableSelfPreservation: false
-
